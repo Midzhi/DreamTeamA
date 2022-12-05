@@ -6,4 +6,15 @@
 # То что осталось от строки выведите на экран.
 # Строка не должна быть короче 10 символов.
 
-def simbols (agr= ):
+def Dreams (text):
+    text = list(text)
+    for i in text:
+        if i in 'aeyuioAEYUIO':
+            text.remove (i)
+    return str(''.join(text))  
+
+print(Dreams('Hello world'))
+
+
+
+    

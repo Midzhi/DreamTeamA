@@ -10,16 +10,14 @@
 
 
 
-#     if i % 2 == 0:
-#         count1 += 1
-# print('amound of even numbers',count1)
  
 uniques = {3,13,15,27,1,4,8,23,19,12,9,2,29,17}
 
+#Решение1
+uniques_1 = set(filter(lambda x: int(x) % 2,uniques))
+print('Все нечетные значения', uniques_1)
 
-uniques =set(filter(lambda x: int(x) % 2,uniques))
-
-
-print('only odd digits', uniques)
-
-
+#Решение2
+uniques_list = [i for i in list(uniques) if i % 2 != 0]
+uniques_2 = set(sorted(uniques_list, reverse=True))
+print('Все нечетные значения', uniques_2)
